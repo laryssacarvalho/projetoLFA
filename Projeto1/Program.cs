@@ -11,14 +11,17 @@ namespace Projeto1
     {
         static void Main(string[] args)
         {
+            Queue<string> fila = new Queue<string>();
             string[] variaveis = { "" };
             string[] alfabeto;
             string inicial = "";
             string saida = "";
+            string palavra = "";
             List<string> p0 = new List<string>();
             List<string> p1 = new List<string>();
             List<string> aux = new List<string>();
             List<int> entrada = new List<int>();
+
             bool repeat = true;
 
             while (repeat)
@@ -110,33 +113,48 @@ namespace Projeto1
 
             repeat = true;
 
+            //while (repeat)
+            //{
+            //    Console.WriteLine("\nDigite os valores de entrada separados por vírgula. Ex: 1, 12, 7");
+            //    aux = Console.ReadLine().Replace(" ", string.Empty).Split(',').ToList();
+
+            //    foreach (string s in aux)
+            //    {
+            //        if(s != "")
+            //        {
+            //            entrada.Add(Convert.ToInt32(s));
+            //        }
+            //    }
+
+            //    if (entrada.Count <= 0)
+            //    {
+            //        Console.WriteLine("\n\tERRO: Por favor, digite ao menos um valor de entrada!");
+            //        entrada = new List<int>();
+            //    }
+            //    else if(entrada.Max() > p0.Count)
+            //    {
+            //        Console.WriteLine("\n\tERRO: Por favor, digite apenas entradas válidas!");
+            //        entrada = new List<int>();
+            //    }
+            //    else if (p0[entrada[0]-1] != inicial)
+            //    {
+            //        Console.WriteLine("\n\tERRO: Por favor, a primeira entrada deve possuir a variável inicial!");
+            //        entrada = new List<int>();
+            //    }
+            //    else
+            //    {
+            //        repeat = false;
+            //    }
+            //}
+
             while (repeat)
             {
-                Console.WriteLine("\nDigite os valores de entrada separados por vírgula. Ex: 1, 12, 7");
-                aux = Console.ReadLine().Replace(" ", string.Empty).Split(',').ToList();
+                Console.WriteLine("\nDigite a palavra a ser derivada.");
+                palavra = Console.ReadLine();                
 
-                foreach (string s in aux)
+                if (palavra == "")
                 {
-                    if(s != "")
-                    {
-                        entrada.Add(Convert.ToInt32(s));
-                    }
-                }
-
-                if (entrada.Count <= 0)
-                {
-                    Console.WriteLine("\n\tERRO: Por favor, digite ao menos um valor de entrada!");
-                    entrada = new List<int>();
-                }
-                else if(entrada.Max() > p0.Count)
-                {
-                    Console.WriteLine("\n\tERRO: Por favor, digite apenas entradas válidas!");
-                    entrada = new List<int>();
-                }
-                else if (p0[entrada[0]-1] != inicial)
-                {
-                    Console.WriteLine("\n\tERRO: Por favor, a primeira entrada deve possuir a variável inicial!");
-                    entrada = new List<int>();
+                    Console.WriteLine("\n\tERRO: Por favor, digite uma palavra!");                    
                 }
                 else
                 {
@@ -144,16 +162,19 @@ namespace Projeto1
                 }
             }
 
-            saida = decifrarPalavra(p0, p1, entrada);
+            //saida = decifrarPalavra(p0, p1, entrada);
 
-            if (variaveis.Any(c => saida.Contains(c)))
-            {
-                Console.WriteLine($"\nNão foi possível decifrar a palavra. Saída: {saida}");
-            }
-            else
-            {
-                Console.WriteLine($"\nPalavra decifrada: {saida}");
-            }            
+            saida = derivarPalavra(p0, p1, p1[0], palavra);
+            Console.WriteLine($"\nPalavra decifrada: {saida}");
+
+            //if (variaveis.Any(c => saida.Contains(c)))
+            //{
+            //    Console.WriteLine($"\nNão foi possível decifrar a palavra. Saída: {saida}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"\nPalavra decifrada: {saida}");
+            //}            
             Console.ReadLine();
         }
 
@@ -176,6 +197,38 @@ namespace Projeto1
                 }
             }
             return palavra;
+        }
+
+        public static string derivarPalavra(List<string> p0, List<string> p1, string inicial, string palavra)
+        {
+            string saida = "";
+            int i;
+            Queue<string> fila = new Queue<string>();            
+            fila.Enqueue(inicial);
+            while(fila.Count > 0)
+            {
+                string atual = fila.Dequeue();
+                if(atual == palavra)
+                {
+                    return palavra;
+                }
+
+                //monta os nós adjacentes ao nó atual, realizando a substituição da regra
+                for(i = 0; i < p0.Count; i++)
+                {
+                    if (atual.Contains(p0[i]))
+                    {
+                        string adj = atual.Replace(p0[i], p1[i]);
+
+                        if (!fila.Contains(adj))
+                        {
+                            fila.Enqueue(adj);
+                        }
+                    }                    
+                }
+            }
+
+            return saida;
         }
     }
 }
