@@ -1,0 +1,30 @@
+c:\users\132118\documents\visual studio 2013\Projects\Projeto1\Projeto1\bin\Debug\Projeto1.exe.config
+c:\users\132118\documents\visual studio 2013\Projects\Projeto1\Projeto1\obj\Debug\Projeto1.csprojResolveAssemblyReference.cache
+D:\Projeto1\Projeto1\bin\Debug\Projeto1.exe.config
+D:\Projeto1\Projeto1\bin\Debug\Projeto1.exe
+D:\Projeto1\Projeto1\bin\Debug\Projeto1.pdb
+D:\Projeto1\Projeto1\obj\Debug\Projeto1.csproj.CoreCompileInputs.cache
+D:\Projeto1\Projeto1\obj\Debug\Projeto1.exe
+D:\Projeto1\Projeto1\obj\Debug\Projeto1.pdb
+D:\Projeto1\Projeto1\obj\Debug\Projeto1.csprojAssemblyReference.cache
+C:\Users\larys\Desktop\Projeto1\Projeto1\bin\Debug\Projeto1.exe.config
+C:\Users\larys\Desktop\Projeto1\Projeto1\bin\Debug\Projeto1.exe
+C:\Users\larys\Desktop\Projeto1\Projeto1\bin\Debug\Projeto1.pdb
+C:\Users\larys\Desktop\Projeto1\Projeto1\obj\Debug\Projeto1.csprojAssemblyReference.cache
+C:\Users\larys\Desktop\Projeto1\Projeto1\obj\Debug\Projeto1.csproj.CoreCompileInputs.cache
+C:\Users\larys\Desktop\Projeto1\Projeto1\obj\Debug\Projeto1.exe
+C:\Users\larys\Desktop\Projeto1\Projeto1\obj\Debug\Projeto1.pdb
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\bin\Debug\Projeto1.exe.config
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\bin\Debug\Projeto1.exe
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\bin\Debug\Projeto1.pdb
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\obj\Debug\Projeto1.csprojAssemblyReference.cache
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\obj\Debug\Projeto1.csproj.CoreCompileInputs.cache
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\obj\Debug\Projeto1.exe
+C:\Users\saodbrag\Documents\Daniel\FACENS\9º Semestre\Projeto1\Projeto1\obj\Debug\Projeto1.pdb
+C:\Users\larys\Downloads\Projeto1\Projeto1\bin\Debug\Projeto1.exe.config
+C:\Users\larys\Downloads\Projeto1\Projeto1\bin\Debug\Projeto1.exe
+C:\Users\larys\Downloads\Projeto1\Projeto1\bin\Debug\Projeto1.pdb
+C:\Users\larys\Downloads\Projeto1\Projeto1\obj\Debug\Projeto1.csprojAssemblyReference.cache
+C:\Users\larys\Downloads\Projeto1\Projeto1\obj\Debug\Projeto1.csproj.CoreCompileInputs.cache
+C:\Users\larys\Downloads\Projeto1\Projeto1\obj\Debug\Projeto1.exe
+C:\Users\larys\Downloads\Projeto1\Projeto1\obj\Debug\Projeto1.pdb
