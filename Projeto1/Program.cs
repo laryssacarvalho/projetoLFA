@@ -54,7 +54,7 @@ namespace Projeto1
 
                 if (escolha == 2)
                 {
-                    palavra = GetPalavra();
+                    palavra = GetPalavra(g);
 
                     List<int> regras = new List<int>();
 
@@ -218,7 +218,7 @@ namespace Projeto1
             return false;
         }
 
-        public static string GetPalavra()
+        public static string GetPalavra(Grammar g)
         {
             string palavra = "";
             bool repeat = true;
@@ -230,6 +230,10 @@ namespace Projeto1
                 if (palavra == "")
                 {
                     Console.WriteLine("\n\tERRO: Por favor, digite uma palavra!");
+                }
+                else if(!AlfabetoValido(g, palavra))
+                {
+                    Console.WriteLine("\n\tERRO: A palavra deve conter apenas letras presentes no alfabeto!");
                 }
                 else
                 {
@@ -276,6 +280,20 @@ namespace Projeto1
                     repeat = false;
                 }
             }
+        }
+
+        public static bool AlfabetoValido(Grammar g, string palavra)
+        {
+            palavra = palavra.Replace(" ", string.Empty);
+            char[] characters = palavra.ToCharArray();
+            foreach (char c in characters)
+            {
+                if (!g.Alfabeto.Contains(c.ToString()))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
