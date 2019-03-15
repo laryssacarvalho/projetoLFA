@@ -8,7 +8,7 @@ namespace Projeto1
     {
         static void Main(string[] args)
         {
-            bool repeat = true, repeatProg = true, newG = true;
+            bool repeatProg = true, newG = true;
 
             Grammar g = new Grammar();
 
